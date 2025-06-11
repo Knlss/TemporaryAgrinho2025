@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="postsStyle.css">
+    <title>MUDAR TITULO</title>
+</head>
+<body>
+    <header class="header">
+        <a href="#">Blog</a>
+        <label class="toggleMode">
+            <input type="checkbox" id="toggleModeButton" class="toggleModeButton">
+            <span class="toggleMode-btn" title="Alterar Tema"></span>
+        </label>
+    </header>
+    <div class="contentCentralTitle">
+            <h2>Central Title</h2>
+    </div>
+    <div class="contentTitleImage">
+        <img src="src/imgs/bodyImage1.jpeg" alt="">
+    </div>
+    <div class="contentToggleIndex">
+        <input type="checkbox" id="toggleIndexButton" class="toggleIndexButton">
+        <h5>Índice de Conteúdos [<label for="toggleIndexButton">Mostrar/Ocultar</label>]</h5>
+        <ul class="listIndexItems">
+            <li><a href="#paragraph1">Titulo do paragrafo 1</a></li>
+            <li><a href="#paragraph2">Titulo do paragrafo 2</a></li>
+            <ul>
+                <li><a href="#subParagraph1">Titulo do subparagrafo</a></li>
+            </ul>
+        </ul>
+    </div>
+    <div class="contentArticleText">
+        <h3 id="paragraph1" class="subTitle">Titulo do texto</h3>
+        <p class="articleText">
+            Sed ex elit, lobortis eu nulla id, sagittis venenatis leo. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris semper, ligula quis sodales ornare, augue enim pellentesque felis, a dapibus dolor ante vel enim. Mauris ultrices feugiat pellentesque. Aliquam viverra quam lorem, eget vehicula quam vestibulum rhoncus. Morbi posuere sagittis ullamcorper. Quisque augue metus, tincidunt dictum varius et, tincidunt ut velit. Donec egestas porttitor justo, malesuada consectetur tellus condimentum non.
+        </p>
+    </div>
+    <div class="contentArticleImage">
+        <img src="src/imgs/bodyImage1.jpeg" alt="">
+    </div>
+    <div class="contentArticleText">
+        <h3 id="paragraph1" class="subTitle">Titulo do texto</h3>
+        <p class="articleText">
+            Nulla tristique quam malesuada erat maximus, eget pulvinar eros pulvinar. Donec sollicitudin sollicitudin nulla eu consectetur. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam cursus auctor ante sollicitudin scelerisque. Suspendisse ultrices, tortor a feugiat vulputate, ante ex dictum libero, sed aliquam ligula eros ac est. Praesent consequat facilisis orci, in tristique arcu laoreet eu. Donec sodales eros nisi. Aliquam faucibus, ante sollicitudin aliquam cursus, odio urna lacinia odio, eget mattis urna purus in tortor. Pellentesque porta sapien nec lacus dignissim consequat. Quisque erat orci, condimentum eget imperdiet nec, viverra in urna. In hac habitasse platea dictumst. Praesent diam risus, hendrerit a dignissim consectetur, posuere quis ex. Duis id tortor non metus efficitur venenatis a non nisl.
+        </p>
+    </div>
+    <div class="contentArticleSlide">
+        <div class="articleSlider">
+            <div class="slider">
+                <input class="sliderInput" type="radio" name="slide" id="slide1" checked>
+                <input class="sliderInput" type="radio" name="slide" id="slide2">
+                <input class="sliderInput" type="radio" name="slide" id="slide3">
+                <div class="slideshow s1">
+                    <img src="src/imgs/bodyImage1.jpeg" alt="">
+                </div>
+                <div class="slideshow">
+                    <img src="https://img.freepik.com/fotos-gratis/conservacao-ambiental-no-jardim-para-criancas_1150-15276.jpg?semt=ais_hybrid&w=740" alt="">
+                </div>
+                <div class="slideshow">
+                    <img src="src/imgs/bodyImage2.jpeg" alt="">
+                </div>
+                <div class="sliderNavigation">
+                    <label class="sliderBar" for="slide1"></label>
+                    <label class="sliderBar" for="slide2"></label>
+                    <label class="sliderBar" for="slide3"></label>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="contentArticleText">
+        <h3 id="paragraph1" class="subTitle">Titulo do texto</h3>
+        <p class="articleText">
+           In bibendum tempor felis, at cursus neque cursus non. Vivamus et nibh tortor. Duis mauris nulla, venenatis id ipsum vitae, tempus pretium felis. Quisque in scelerisque nisi. Vestibulum placerat ligula eu ex rutrum accumsan. Mauris fermentum tincidunt ligula, vitae vehicula mauris vulputate in. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Donec fringilla molestie nulla cursus volutpat. Donec sed laoreet tortor, eget posuere dui. Vestibulum malesuada feugiat mi sit amet malesuada. Proin pulvinar ac magna vitae lacinia. Integer egestas metus vel facilisis maximus. Mauris pellentesque accumsan mauris, quis interdum libero vulputate ac. 
+        </p>
+    </div>
+    <div class="contentArticleImage">
+        <img src="src/imgs/bodyImage2.jpeg" alt="">
+    </div>
+    <div class="contentCommentsSession">
+
+    </div>
+    <div class="contentRecommendedCards">
+
+    </div>
+    <footer class="footer">
+        <div class="contentBlogAbout">
+            <h3>TITULO SOBRE O SOBRE O BLOG</h3>
+            <p>SOBRE O BLOG</p>
+        </div>
+        <div class="contentArticleShare">
+            <ul>
+                <li>
+                    <a href="https://web.whatsapp.com/send?text=TEXTO E LINK DO ARTIGO" class="shareItem" target="_blank">
+                        <div class="shareLabel">
+                            <img class="shareImage" src="./imgs/share/shareImage1.png" alt="whatsapp">
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=TEXTO E LINK DO ARTIGO" class="shareItem" target="_blank">
+                        <div class="shareLabel">
+                            <img class="shareImage" src="./imgs/share/shareImage2.png" alt="facebook">
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://x.com/intent/post?url=TEXTO E LINK DO ARTIGO" class="shareItem" target="_blank">
+                        <div class="shareLabel">
+                            <img class="shareImage" src="./imgs/share/shareImage3.png" alt="X">
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/sharing/share-offsite/?url=TEXTO E LINK DO ARTIGO" class="shareItem" target="_blank">
+                        <div class="shareLabel">
+                            <img class="shareImage" src="./imgs/share/shareImage4.png" alt="linkedin">
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <img src="" alt="">
+        <div class="contentAddress">
+
+        </div>
+        <div class="contentCopyright">
+            <p>
+                sessão de copyright MUDAR TEXTO DEPOIS
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
