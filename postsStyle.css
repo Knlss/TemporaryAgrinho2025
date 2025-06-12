@@ -1,24 +1,30 @@
 :root {
-    --section_background: #d6c09d;
-    --section_border: #24a832;
-    --background: #F5DFBB;
-    --text_color: #341d10;
-    --link_color: rgb(7, 209, 24);
-    --section_hover: #078f14;
-    --share_hover: #24a832;
-    --link_hover: rgb(4, 126, 14);
-    --slide_bar: #278f86;
-    --slide_bar_hover: #99bc41;
-    --shadow: rgba(0, 0, 0, 0.3);
+    --sectionBackgroundColor: #d6c09d;
+    --sectionBorderColor: #24a832;
+    --bodyBackgroundColor: #F5DFBB;
+    --textColor: #341d10;
+    --linkColor: rgb(7, 209, 24);
+    --linkHover: rgb(4, 126, 14);
+    --slideBarColor: #278f86;
+    --slideBarHover: #99bc41;
+    --bodyShadow: rgba(0, 0, 0, 0.1);
+    --bodyShadowHover: rgba(0, 0, 0, 0.8);
     --index_display: none;
     --index_width: 290px;
+    --cardUserName: #331501;
+    --cardTimestamp: #272419;
+    --recommendedCardCategory: #999999;
+    --recommendedCardReadMore: #999999;
+    --recommendedCardTitle: #222222;
 }
 
 :root:has(#toggleModeButton:checked) {
-    --section_background: #341d10;
-    --section_border: #24a832;
-    --background: #322117;
-    --text_color: #F5DFBB;
+    --sectionBackgroundColor: #341d10;
+    --sectionBorderColor: #24a832;
+    --bodyBackgroundColor: #322117;
+    --textColor: #F5DFBB;
+    --cardUserName: #f8dbac;
+    --cardTimestamp: #f8ece3;
 }
 
 :root:has(#toggleIndexButton:checked) {
@@ -33,8 +39,9 @@ html {
 body {
     margin: 0;
     padding: 0;
-    background-color: var(--background);
-    color: var(--text_color);
+    background-color: var(--bodyBackgroundColor);
+    transition: background-color 0.2s ease;
+    color: var(--textColor);
     font-family: Arial, Helvetica, sans-serif;
     overflow-x: hidden;
 }
@@ -51,14 +58,16 @@ body {
     font-weight: bold;
     height: 110px;
     padding-left: 24px;
-    background-color: var(--section_background);
-    color: var(--text_color);
-    border-bottom: 10px var(--section_border) solid;
+    background-color: var(--sectionBackgroundColor);
+    transition: background-color 0.2s ease;
+    color: var(--textColor);
+    border-bottom: 10px var(--sectionBorderColor) solid;
+    color: var(--recommendedCardTitle)
 }
 
 .header a {
     font-size: 38px;
-    color: var(--text_color);
+    color: var(--textColor);
     text-decoration: none;
 }
 
@@ -71,7 +80,7 @@ body {
     position: relative;
     width: 60px;
     height: 34px;
-    border: 3px var(--section_border) solid;
+    border: 3px var(--sectionBorderColor) solid;
     border-radius: 34px;
     margin-right: 5%;
 }
@@ -87,7 +96,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: var(--background);
+    background-color: var(--bodyBackgroundColor);
     border-radius: 34px;
     transition: .4s;
 }
@@ -99,13 +108,13 @@ body {
     width: 26px;
     left: 4px;
     bottom: 4px;
-    background-color: var(--section_border);
+    background-color: var(--sectionBorderColor);
     border-radius: 50%;
     transition: .4s;
 }
 
 input:checked+.toggleMode-btn {
-    background-color: var(--background);
+    background-color: var(--bodyBackgroundColor);
 }
 
 input:checked+.toggleMode-btn:before {
@@ -129,16 +138,8 @@ input:checked+.toggleMode-btn:before {
 .contentTitleImage {
     display: flex;
     flex-direction: column;
-    width: 65%;
-    align-items: center;
-    margin: 20px auto 40px auto;
-}
-
-.contentArticleImage {
-    display: flex;
-    flex-direction: column;
-    width: 720px;
-    height: 450px;
+    width: 800px;
+    height: 600px;
     align-items: center;
     margin: 20px auto 40px auto;
 }
@@ -159,7 +160,7 @@ input:checked+.toggleMode-btn:before {
     font-size: 18px;
     margin: 20px 20% 40px 18%;
     width: var(--index_width);
-    border: 1px solid var(--section_border);
+    border: 1px solid var(--sectionBorderColor);
 }
 
 .toggleIndexButton {
@@ -177,14 +178,14 @@ input:checked+.toggleMode-btn:before {
 .contentToggleIndex label,
 .contentToggleIndex a {
     text-decoration: none;
-    color: var(--link_color);
+    color: var(--linkColor);
     cursor: pointer;
 }
 
 .contentToggleIndex a:hover,
 .textBlock a:hover,
 .contentToggleIndex label:hover {
-    color: var(--link_hover);
+    color: var(--linkHover);
 }
 
 .contentToggleIndex ul {
@@ -214,6 +215,15 @@ input:checked+.toggleMode-btn:before {
     width: 65%
 }
 
+.contentArticleImage {
+    display: flex;
+    flex-direction: column;
+    width: 720px;
+    height: 450px;
+    align-items: center;
+    margin: 20px auto 30px auto;
+}
+
 .subTitle {
     font-size: 26px;
     margin-bottom: 25px;
@@ -221,7 +231,7 @@ input:checked+.toggleMode-btn:before {
 
 .contentArticleText a {
     text-decoration: none;
-    color: var(--link_color);
+    color: var(--linkColor);
 }
 
 .articleText {
@@ -236,7 +246,7 @@ input:checked+.toggleMode-btn:before {
     align-items: center;
     justify-content: center;
     font-size: 18px;
-    margin: auto;
+    margin: 20px auto 30px auto;
     width: 65%
 }
 
@@ -311,7 +321,6 @@ input:checked+.toggleMode-btn:before {
     }
 }
 
-
 .slider {
     display: flex;
     width: 300%;
@@ -349,100 +358,156 @@ input:checked+.toggleMode-btn:before {
 .sliderBar {
     width: 70px;
     height: 11px;
-    border: 2px solid var(--slide_bar);
+    border: 2px solid var(--slideBarColor);
+    transition: background-color 0.4s ease;
     border-radius: 25px;
     margin: 2%;
 }
 
 .sliderBar:hover {
-    transition: 0.4s;
-    background-color: var(--slide_bar_hover);
+    background-color: var(--slideBarHover);
 }
 
 
 
 
-.contentCommentSession {
+.contentRecommendedSession, .contentCommentSession {
     display: flex;
     flex-direction: column;
     font-size: 18px;
-    margin: 20px auto 40px auto;
     width: 65%
 }
 
-.contentCommentSession h2 {
-    margin-bottom: 0;
+.contentRecommendedSession {
+    margin: 20px auto 10px auto;
 }
 
-.commentAmount {
-    font-size: 16px;
+.contentRecommendedSession h2, .contentCommentSession h2 {
+    margin-bottom: 15px;
 }
 
 .horizontalLine {
     height: 1px; 
     width: 100%; 
-    background-color: #000000; 
+    background-color: var(--sectionBorderColor); 
     margin-bottom: 20px;
 }
 
 
 
+.contentRecommendedCard {
+    display: flex;
+    width: 700px;
+    margin: 15px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px var(--bodyShadow);
+    transition: box-shadow .4s ease;
+    overflow: hidden;
+}
+
+.recommendedCard {
+    flex: 1;
+    padding: 20px;
+}
+
+.contentRecommendedCard:hover {
+    box-shadow: 0 2px 6px var(--bodyShadowHover);
+}
+
+.recommendedCardCategory {
+    font-size: 12px;
+    color: var(--recommendedCardCategory);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.recommendedCardTitle {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: var(--recommendedCardTitle);
+}
+
+.recommendedCardDescription {
+    color: var(--recommendedCardDescription);
+    margin-bottom: 20px;
+}
+
+.recommendedCardReadMore {
+    font-size: 12px;
+    color: var(--recommendedCardReadMore);
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.recommendedCardImage {
+    width: 200px;
+    object-fit: cover;
+}
 
 
+
+
+
+
+
+.contentCommentSession {
+    margin: 10px auto 40px auto;
+}
+
+.commentAmount {
+    font-size: 16px;
+    margin-top: 0px;
+}
 
 .contentCommentCard {
-  display: flex;
-  align-items: flex-start;
-  gap: 10px;
-  margin: 15px;
-  max-width: 800px;
-  font-family: Arial, sans-serif;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin: 15px;
+    width: 800px;
+    font-family: Arial, sans-serif;
 }
 
 .commentCardUserAvatar {
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  object-fit: cover;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
 }
 
-.commentCard {
-  flex: 1;
+    .commentCard {
+    flex: 1;
 }
 
 .commentCardHeader {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 5px;
 }
 
 .commentCardUserName {
-  font-weight: bold;
-  color: #0f52ba;
+    font-weight: bold;
+    color: var(--cardUserName);
 }
 
 .commentCardTimestamp {
-  font-size: 12px;
-  color: #666;
+    font-size: 12px;
+    color: var(--cardTimestamp);
 }
 
 .commentCardText {
-  margin: 0;
-  font-size: 14px;
+    margin: 0;
+    font-size: 14px;
+    text-indent: 18px;
 }
 
-
-
-
-
-
-
-
-
 .footer {
-    border-top: 10px var(--section_border) solid;
-    background-color: var(--section_background);
+    border-top: 10px var(--sectionBorderColor) solid;
+    background-color: var(--sectionBackgroundColor);
+    transition: background-color 0.2s ease;
     padding: 5px 70px;
     display: flex;
     align-items: flex-start;
@@ -452,7 +517,7 @@ input:checked+.toggleMode-btn:before {
 
 .footer a {
     text-decoration: none;
-    color: var(--text_color);
+    color: var(--textColor);
 }
 
 .contentBlogAbout {
@@ -462,11 +527,9 @@ input:checked+.toggleMode-btn:before {
 
 .contentBlogAbout h3 {
     margin-bottom: 10px;
-    color: var(--text_color);
 }
 
 .contentBlogAbout p {
-    color: var(--text_color);
     line-height: 1.5;
 }
 
@@ -520,7 +583,6 @@ input:checked+.toggleMode-btn:before {
     margin: 0px 20px 20px 20px;
     width: 100%;
     font-size: 14px;
-    color: var(--text_color);
 }
 
 .address {
@@ -532,5 +594,22 @@ input:checked+.toggleMode-btn:before {
 }
 
 .copyright a {
-  text-decoration: underline;
+    text-decoration: underline;
+}
+
+
+
+
+
+/* media query dos cards de recomendados */
+
+@media (max-width: 600px) {
+    .contentRecommendedCard {
+        flex-direction: column;
+    }
+
+    .recommendedCardImage {
+        width: 100%;
+        height: 200px;
+    }
 }
