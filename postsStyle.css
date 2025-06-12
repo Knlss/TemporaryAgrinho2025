@@ -62,6 +62,11 @@ body {
     text-decoration: none;
 }
 
+.logoImage {
+    width: 150px;
+    height: 50px;
+}
+
 .toggleMode {
     position: relative;
     width: 60px;
@@ -124,29 +129,24 @@ input:checked+.toggleMode-btn:before {
 .contentTitleImage {
     display: flex;
     flex-direction: column;
-    width: 70%;
+    width: 65%;
     align-items: center;
     margin: 20px auto 40px auto;
-}
-
-.contentTitleImage img {
-    width: 100%;
-    height: 100%;
-    border-radius: 20px;
 }
 
 .contentArticleImage {
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 720px;
+    height: 450px;
     align-items: center;
     margin: 20px auto 40px auto;
 }
 
-.contentArticleImage img {
+.contentArticleImage img, .contentTitleImage img {
     width: 100%;
     height: 100%;
-    border-radius: 20px;
+    border-radius: 40px;
 }
 
 .contentToggleIndex label {
@@ -230,8 +230,6 @@ input:checked+.toggleMode-btn:before {
     padding-left: 10px;
 }
 
-/* SLIDER ABAIXO */ 
-
 .contentArticleSlide {
     display: flex;
     flex-direction: column;
@@ -243,9 +241,9 @@ input:checked+.toggleMode-btn:before {
 }
 
 .articleSlider {
-    height: 375px;
-    width: 600px;
-    border-radius: 20px;
+    width: 720px;
+    height: 450px;
+    border-radius: 40px;
     overflow: hidden;
     position: relative;
 }
@@ -359,4 +357,180 @@ input:checked+.toggleMode-btn:before {
 .sliderBar:hover {
     transition: 0.4s;
     background-color: var(--slide_bar_hover);
+}
+
+
+
+
+.contentCommentSession {
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+    margin: 20px auto 40px auto;
+    width: 65%
+}
+
+.contentCommentSession h2 {
+    margin-bottom: 0;
+}
+
+.commentAmount {
+    font-size: 16px;
+}
+
+.horizontalLine {
+    height: 1px; 
+    width: 100%; 
+    background-color: #000000; 
+    margin-bottom: 20px;
+}
+
+
+
+
+
+
+.contentCommentCard {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 15px;
+  max-width: 800px;
+  font-family: Arial, sans-serif;
+}
+
+.commentCardUserAvatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.commentCard {
+  flex: 1;
+}
+
+.commentCardHeader {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 5px;
+}
+
+.commentCardUserName {
+  font-weight: bold;
+  color: #0f52ba;
+}
+
+.commentCardTimestamp {
+  font-size: 12px;
+  color: #666;
+}
+
+.commentCardText {
+  margin: 0;
+  font-size: 14px;
+}
+
+
+
+
+
+
+
+
+
+.footer {
+    border-top: 10px var(--section_border) solid;
+    background-color: var(--section_background);
+    padding: 5px 70px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer a {
+    text-decoration: none;
+    color: var(--text_color);
+}
+
+.contentBlogAbout {
+    width: 300px;
+    margin: 20px;
+}
+
+.contentBlogAbout h3 {
+    margin-bottom: 10px;
+    color: var(--text_color);
+}
+
+.contentBlogAbout p {
+    color: var(--text_color);
+    line-height: 1.5;
+}
+
+.contentArticleShare {
+    display: flex;
+    justify-content: center;
+    width: 170px;
+}
+
+.contentArticleShare ul {
+    display: flex;
+    justify-content: center;
+    padding-left: 0;
+}
+
+.contentArticleShare ul li {
+    list-style-type: none;
+    display: block;
+    margin-right: 14px;
+    padding: 10px;
+}
+
+.shareItem {
+    width: 10px;
+    height: 10px;
+}
+
+.shareLabel {
+    height: 10px;
+    width: 10px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.shareImage {
+    width: 20px;
+    height: 20px;
+}
+
+.logoImage {
+    width: 150px;
+    height: 50px;
+}
+
+.contentBlogInformation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 20px 20px 20px;
+    width: 100%;
+    font-size: 14px;
+    color: var(--text_color);
+}
+
+.address {
+    margin: 0;
+}
+
+.copyright {
+    margin: 0;
+}
+
+.copyright a {
+  text-decoration: underline;
 }
