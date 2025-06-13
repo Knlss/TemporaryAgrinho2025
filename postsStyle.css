@@ -1,30 +1,43 @@
 :root {
-    --sectionBackgroundColor: #d6c09d;
-    --sectionBorderColor: #24a832;
-    --bodyBackgroundColor: #F5DFBB;
-    --textColor: #341d10;
-    --linkColor: rgb(7, 209, 24);
-    --linkHover: rgb(4, 126, 14);
-    --slideBarColor: #278f86;
-    --slideBarHover: #99bc41;
-    --bodyShadow: rgba(0, 0, 0, 0.1);
-    --bodyShadowHover: rgba(0, 0, 0, 0.8);
+    --sectionBackgroundColor: #99bb33;
+    --sectionBorderColor: #668f4f;
+    --bodyBackgroundColor: #f5f5e6;
+    --articleSessionBackgroundColor: #ededda;
+    --textColor: #3e3e3e;
+    --toggleIndexLinkColor: #853d25;
+    --toggleIndexLinkHover: #555424;
+    --slideBarColor: #c0d9a7;
+    --slideBarHover: #aac96d;
+    --bodyShadow: rgba(0, 0, 0, 0.5);
+    --bodyShadowHover: rgba(0, 0, 0);
     --index_display: none;
     --index_width: 290px;
-    --cardUserName: #331501;
-    --cardTimestamp: #272419;
-    --recommendedCardCategory: #999999;
-    --recommendedCardReadMore: #999999;
+    --cardUserName: #5d3a1a;
+    --cardTimestamp: #7a6652;
+    --recommendedCardBackgroundColor: #fffbea;
+    --recommendedCardInfs: #8c8c8c;
     --recommendedCardTitle: #222222;
+    --footerLinkColor: #071404;
+    --footerLinkHover: #2a8b11;
 }
 
 :root:has(#toggleModeButton:checked) {
-    --sectionBackgroundColor: #341d10;
-    --sectionBorderColor: #24a832;
-    --bodyBackgroundColor: #322117;
-    --textColor: #F5DFBB;
-    --cardUserName: #f8dbac;
-    --cardTimestamp: #f8ece3;
+    --sectionBackgroundColor: #314b2d;
+    --sectionBorderColor: #6c9a5e;
+    --bodyBackgroundColor: #1e2b1b;
+    --articleSessionBackgroundColor: #22301f;
+    --textColor: #f1faea;
+    --toggleIndexLinkColor: #a4d07b;
+    --toggleIndexLinkHover: #d9d40c;
+    --slideBarColor: #4e8849;
+    --slideBarHover: #668f4f;
+    --recommendedCardBackgroundColor: #2a3827;
+    --cardUserName: #cec795;
+    --cardTimestamp: #c3c7b2;
+    --recommendedCardInfs: #aaaaaa;
+    --recommendedCardTitle: #eeeeee;
+    --footerLinkColor: #dffdc3;
+    --footerLinkHover: #a9ff59;
 }
 
 :root:has(#toggleIndexButton:checked) {
@@ -46,6 +59,10 @@ body {
     overflow-x: hidden;
 }
 
+h3 {
+    margin-block-start: 0px
+}
+
 .header {
     display: flex;
     top: 0;
@@ -58,9 +75,6 @@ body {
     font-weight: bold;
     height: 110px;
     padding-left: 24px;
-    background-color: var(--sectionBackgroundColor);
-    color: var(--textColor);
-    transition: background-color .4s ease, color .4s ease;
     border-bottom: 10px var(--sectionBorderColor) solid;
 }
 
@@ -177,14 +191,14 @@ input:checked+.toggleMode-btn:before {
 .contentToggleIndex label,
 .contentToggleIndex a {
     text-decoration: none;
-    color: var(--linkColor);
+    color: var(--toggleIndexLinkColor);
     cursor: pointer;
 }
 
 .contentToggleIndex a:hover,
 .textBlock a:hover,
 .contentToggleIndex label:hover {
-    color: var(--linkHover);
+    color: var(--toggleIndexLinkHover);
 }
 
 .contentToggleIndex ul {
@@ -206,12 +220,20 @@ input:checked+.toggleMode-btn:before {
     padding: 0px 0px 10px 0px;
 }
 
+.contentArticleSession {
+    background-color: var(--articleSessionBackgroundColor);
+    width: 1000px;
+    margin: 0 auto;
+    padding: 26px 0px;
+    border-radius: 30px;
+}
+
 .contentArticleText {
     display: flex;
     flex-direction: column;
     font-size: 18px;
     margin: 20px auto 40px auto;
-    width: 65%
+    width: 80%
 }
 
 .contentArticleImage {
@@ -220,7 +242,7 @@ input:checked+.toggleMode-btn:before {
     width: 720px;
     height: 450px;
     align-items: center;
-    margin: 20px auto 30px auto;
+    margin: 20px auto 40px auto;
 }
 
 .subTitle {
@@ -230,7 +252,7 @@ input:checked+.toggleMode-btn:before {
 
 .contentArticleText a {
     text-decoration: none;
-    color: var(--linkColor);
+    color: var(--toggleIndexLinkColor);
 }
 
 .articleText {
@@ -368,8 +390,6 @@ input:checked+.toggleMode-btn:before {
 }
 
 
-
-
 .contentRecommendedSession, .contentCommentSession {
     display: flex;
     flex-direction: column;
@@ -378,7 +398,7 @@ input:checked+.toggleMode-btn:before {
 }
 
 .contentRecommendedSession {
-    margin: 20px auto 10px auto;
+    margin: 20px auto 30px;
 }
 
 .contentRecommendedSession h2, .contentCommentSession h2 {
@@ -392,17 +412,20 @@ input:checked+.toggleMode-btn:before {
     margin-bottom: 20px;
 }
 
-
-
 .contentRecommendedCard {
     display: flex;
     width: 700px;
     margin: 15px;
-    background-color: white;
+    background-color: var(--recommendedCardBackgroundColor);
     border-radius: 8px;
-    box-shadow: 0 2px 6px var(--bodyShadow);
+    box-shadow: 0 3px 6px var(--bodyShadow);
     transition: box-shadow .4s ease;
     overflow: hidden;
+}
+
+.contentRecommendedCard a {
+    display: flex;
+    text-decoration: none;
 }
 
 .recommendedCard {
@@ -411,13 +434,13 @@ input:checked+.toggleMode-btn:before {
 }
 
 .contentRecommendedCard:hover {
-    box-shadow: 0 2px 6px var(--bodyShadowHover);
+    box-shadow: 0 4px 12px var(--bodyShadowHover);
 }
 
 .recommendedCardCategory {
     font-size: 12px;
-    color: var(--recommendedCardCategory);
-    text-transform: uppercase;
+    color: var(--recommendedCardInfs);
+    font-weight: bold;
     margin-bottom: 10px;
 }
 
@@ -429,14 +452,15 @@ input:checked+.toggleMode-btn:before {
 }
 
 .recommendedCardDescription {
-    color: var(--recommendedCardDescription);
+    color: var(--textColor);
     margin-bottom: 20px;
 }
 
 .recommendedCardReadMore {
     font-size: 12px;
-    color: var(--recommendedCardReadMore);
+    color: var(--recommendedCardInfs);
     font-weight: bold;
+    width: 50px;
     cursor: pointer;
 }
 
@@ -444,12 +468,6 @@ input:checked+.toggleMode-btn:before {
     width: 200px;
     object-fit: cover;
 }
-
-
-
-
-
-
 
 .contentCommentSession {
     margin: 10px auto 40px auto;
@@ -476,7 +494,7 @@ input:checked+.toggleMode-btn:before {
     object-fit: cover;
 }
 
-    .commentCard {
+.commentCard {
     flex: 1;
 }
 
@@ -593,10 +611,12 @@ input:checked+.toggleMode-btn:before {
 }
 
 .copyright a {
-    text-decoration: underline;
+    color: var(--footerLinkColor);
 }
 
-
+.copyright a:hover {
+    color: var(--footerLinkHover);
+}
 
 
 
