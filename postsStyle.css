@@ -1,46 +1,48 @@
 :root {
+    --bodyBackgroundColor: #f5f5e6;
+    --textColor: #3e3e3e;
     --sectionBackgroundColor: #99bb33;
     --sectionBorderColor: #668f4f;
-    --navigationMenuOptionColor: ;
-    --navigationMenuOptionColorHover: ;
-    --bodyBackgroundColor: #f5f5e6;
-    --articleSessionBackgroundColor: #ededda;
-    --textColor: #3e3e3e;
+    --navigationMenuOptionColor: #649356;
+    --navigationMenuOptionColorHover: #203f04;
     --toggleIndexLinkColor: #853d25;
     --toggleIndexLinkHover: #555424;
-    --slideBarColor: #c0d9a7;
-    --slideBarHover: #aac96d;
-    --bodyShadow: rgba(0, 0, 0, 0.5);
-    --bodyShadowHover: rgba(0, 0, 0);
     --index_display: none;
     --index_width: 290px;
-    --cardUserName: #5d3a1a;
-    --cardTimestamp: #7a6652;
+    --articleSessionBackgroundColor: #ededda;
+    --slideBarColor: #c0d9a7;
+    --slideBarHover: #aac96d;
     --recommendedCardBackgroundColor: #fffbea;
     --recommendedCardInfs: #8c8c8c;
     --recommendedCardTitle: #222222;
+    --bodyShadow: rgba(0, 0, 0, 0.5);
+    --bodyShadowHover: rgba(0, 0, 0);
+    --cardUserName: #5d3a1a;
+    --cardTimestamp: #7a6652;
 }
 
 :root:has(#toggleModeButton:checked) {
+    --bodyBackgroundColor: #1e2b1b;
+    --textColor: #f1faea;
     --sectionBackgroundColor: #314b2d;
     --sectionBorderColor: #6c9a5e;
-    --bodyBackgroundColor: #1e2b1b;
-    --articleSessionBackgroundColor: #22301f;
-    --textColor: #f1faea;
+    --navigationMenuOptionColor: #c1fdb3;
+    --navigationMenuOptionColorHover: #8cff52;
     --toggleIndexLinkColor: #a4d07b;
     --toggleIndexLinkHover: #d9d40c;
+    --articleSessionBackgroundColor: #22301f;
     --slideBarColor: #4e8849;
     --slideBarHover: #668f4f;
     --recommendedCardBackgroundColor: #2a3827;
-    --cardUserName: #cec795;
-    --cardTimestamp: #c3c7b2;
     --recommendedCardInfs: #aaaaaa;
     --recommendedCardTitle: #eeeeee;
+    --cardUserName: #cec795;
+    --cardTimestamp: #c3c7b2;
 }
 
 :root:has(#toggleIndexButton:checked) {
-    --index_width: 40%;
     --index_display: flex;
+    --index_width: 40%;
 }
 
 html {
@@ -48,7 +50,7 @@ html {
 }
 
 *, *::before, *::after {
-  transition: color 0.4s ease, background-color 0.4s ease;
+    transition: color 0.4s ease, background-color 0.4s ease;
 }
 
 body {
@@ -56,7 +58,6 @@ body {
     padding: 0;
     background-color: var(--bodyBackgroundColor);
     color: var(--textColor);
-
     font-family: Arial, Helvetica, sans-serif;
     overflow-x: hidden;
 }
@@ -80,31 +81,26 @@ h3 {
     border-bottom: 10px var(--sectionBorderColor) solid;
 }
 
-.blogLogo {
-
-}
-
-.navigationMenuOption {
-    color: var(--textColor);
-    text-decoration: none;
-}
-
-.navigationMenuOption:hover {
-    color: var(--textColor);
-}
-
 .logoImage {
-    width: 150px;
-    height: 50px;
+    width: 144px;
+    height: 81px;
 }
 
 .navigationMenu {
     display: flex;
-    font-size: 20px;
+    font-size: 25px;
     justify-content: space-between;
     align-items: center;
-    margin-top: 20px;
-    gap: 30px;
+    gap: 40px;
+}
+
+.navigationMenuOption {
+    color: var(--navigationMenuOptionColor);
+    text-decoration: none;
+}
+
+.navigationMenuOption:hover {
+    color: var(--navigationMenuOptionColorHover);
 }
 
 .toggleMode {
@@ -113,7 +109,7 @@ h3 {
     height: 34px;
     border: 3px var(--sectionBorderColor) solid;
     border-radius: 34px;
-    margin-right: 4%;
+    margin: 0px 4% 0px 78px;
 }
 
 .toggleMode input {
@@ -254,6 +250,22 @@ input:checked+.toggleMode-btn:before {
     width: 80%
 }
 
+.subTitle {
+    font-size: 26px;
+    margin-bottom: 25px;
+}
+
+.contentArticleText a {
+    text-decoration: none;
+    color: var(--toggleIndexLinkColor);
+}
+
+.articleText {
+    margin: 8px 0;
+    text-indent: 30px;
+    padding-left: 10px;
+}
+
 .contentArticleImage {
     display: flex;
     flex-direction: column;
@@ -274,22 +286,6 @@ input:checked+.toggleMode-btn:before {
     font-size: 10px;
 }
 
-.subTitle {
-    font-size: 26px;
-    margin-bottom: 25px;
-}
-
-.contentArticleText a {
-    text-decoration: none;
-    color: var(--toggleIndexLinkColor);
-}
-
-.articleText {
-    margin: 8px 0;
-    text-indent: 30px;
-    padding-left: 10px;
-}
-
 .contentArticleSlide {
     display: flex;
     flex-direction: column;
@@ -304,6 +300,12 @@ input:checked+.toggleMode-btn:before {
     border-radius: 40px;
     overflow: hidden;
     position: relative;
+}
+
+.slider {
+    display: flex;
+    width: 300%;
+    height: 100%;
 }
 
 .contentArticleSlide .articleSlider img {
@@ -369,17 +371,6 @@ input:checked+.toggleMode-btn:before {
     }
 }
 
-.slider {
-    display: flex;
-    width: 300%;
-    height: 100%;
-}
-
-.slideshow {
-    width: 33.33%;
-    transition: .4s;
-}
-
 #slide1:checked~.s1 {
     animation: slideshow1 20s infinite;
     position: relative;
@@ -393,6 +384,11 @@ input:checked+.toggleMode-btn:before {
 #slide3:checked~.s1 {
     animation: slideshow3 20s infinite;
     position: relative;
+}
+
+.slideshow {
+    width: 33.33%;
+    transition: .4s;
 }
 
 .sliderNavigation {
@@ -414,7 +410,6 @@ input:checked+.toggleMode-btn:before {
 .sliderBar:hover {
     background-color: var(--slideBarHover);
 }
-
 
 .contentRecommendedSession, .contentCommentSession {
     display: flex;
@@ -614,11 +609,6 @@ input:checked+.toggleMode-btn:before {
     height: 20px;
 }
 
-.logoImage {
-    width: 150px;
-    height: 50px;
-}
-
 .contentBlogInformation {
     display: flex;
     justify-content: space-between;
@@ -636,12 +626,109 @@ input:checked+.toggleMode-btn:before {
     margin: 0;
 }
 
+@media (max-width: 780px) {
 
+    :root {
+        --index_width: 290px;
+    }
 
-/* media query dos cards de recomendados */
+    :root:has(#toggleIndexButton:checked) {
+        --index_width: 290px;
+        --index_display: flex;
+    }
 
-@media (max-width: 600px) {
+    .header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 8px 16px;
+        width: auto;
+        height: auto;
+        font-size: 22px;
+    }
+
+    .header .logoImage {
+        width: 60px; 
+        height: auto;
+    }
+
+    .navigationMenu {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 15px;
+        font-size: 16px;
+        margin: 0;
+    }
+
+    .toggleMode {
+        margin-left: 10px;
+        margin-right: 0;
+    }
+
+    .contentCentralTitle h2 {
+        font-size: 28px;
+        margin: 30px 10px;
+    }
+
+    .contentTitleImage,
+    .contentArticleImage,
+    .contentArticleSlide {
+        width: 90%;
+        height: auto;
+        margin: 20px auto;
+    }
+
+    .contentTitleImage img,
+    .articleImage,
+    .articleSlider {
+        width: 100%;
+        height: auto;
+        border-radius: 20px;
+    }
+
+    .contentToggleIndex {
+        margin: auto;
+    }
+
+    .listIndexItems {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    .contentArticleSession {
+        width: 90%;
+        padding: 10px;
+        margin: 20px auto 40px auto;
+    }
+
+    .contentArticleText {
+        width: 90%;
+        font-size: 16px;
+    }
+
+    .subTitle {
+        font-size: 22px;
+    }
+
+    .articleText {
+        text-indent: 15px;
+        padding-left: 5px;
+    }
+
+    .contentRecommendedSession,
+    .contentCommentSession {
+        width: 90%;
+    }
+
     .contentRecommendedCard {
+        border-radius: 8px;
+        width: 100%;
+        margin-left: 0px;
+    }
+
+    .contentRecommendedCard a {
+        display: flex;
         flex-direction: column;
     }
 
@@ -649,4 +736,55 @@ input:checked+.toggleMode-btn:before {
         width: 100%;
         height: 200px;
     }
+
+    .contentCommentCard {
+        width: 100%;
+        margin: 15px 0px;
+    }
+
+    .commentCardUserAvatar {
+        width: 40px;
+        height: 40px;
+    }
+
+    .footer {
+        flex-direction: column;
+        align-items: center;
+        padding: 30px 20px;
+    }
+
+    .contentBlogInformation {
+        flex-direction: column;
+        align-items: initial;
+        margin: 0px 0px 20px;
+    }
+
+    .contentBlogAbout {
+        width: auto;
+        margin-bottom: 30px;
+    }
+
+    .contentArticleShare ul {
+        flex-direction: row;
+        margin: 16px 0px 30px;
+    }
+
+    .contentArticleShare ul li {
+        padding: 0px;
+    }
+
+    .shareLabel {
+        width: 30px;
+        height: 40px;
+    }
+
+    .shareImage {
+        width: 20px;
+        height: 20px;
+    }
+
+    .address, .copyright{
+        margin-left: 20px;
+    }
 }
+
