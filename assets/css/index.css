@@ -1,6 +1,6 @@
 :root {
-    --toggleIndexLinkColor: #853d25;
-    --toggleIndexLinkHover: #555424;
+    --toggleIndexLinkColor: #934126;
+    --toggleIndexLinkHover: #270a0a;
     --index_display: none;
     --index_width: 290px;
     --articleSectionBackgroundColor: #ededda;
@@ -72,23 +72,24 @@ h3 {
     margin: 15px auto 20px auto;
 }
 
-.contentToggleIndex label,
-.contentToggleIndex a {
+.contentToggleIndex label, 
+.listIndexItems,
+.listIndexItems a {
     text-decoration: none;
     color: var(--toggleIndexLinkColor);
     cursor: pointer;
 }
 
-.contentToggleIndex a:hover,
+.listIndexItems a:hover,
 .textBlock a:hover,
 .contentToggleIndex label:hover {
     color: var(--toggleIndexLinkHover);
 }
 
 .contentToggleIndex ul {
-    list-style-type: none;
     display: var(--index_display);
     flex-direction: column;
+    cursor: default;
 }
 
 .listIndexItems {
@@ -96,12 +97,15 @@ h3 {
     font-size: 15px;
 }
 
-.listIndexItems ul {
-    padding: 0px 0px 0px 20px;
+.listIndexItems li {
+    counter-increment: item;
+    padding: 0 0 10px 0;
+    list-style: none;
 }
 
-.listIndexItems li {
-    padding: 0px 0px 10px 0px;
+.listIndexItems li ul {
+    counter-reset: index;
+    padding-left: 20px;
 }
 
 .contentArticleSection {

@@ -103,33 +103,26 @@ h3 {
     color: var(--toggleIndexLinkHover);
 }
 
-.contentToggleIndex ol {
+.contentToggleIndex ul {
     display: var(--index_display);
     flex-direction: column;
-    counter-reset: item;
+    cursor: default;
 }
 
 .listIndexItems {
     padding: 0px 0px 0px 40px;
     font-size: 15px;
-    counter-reset: item;
-    list-style: none;
 }
 
 .listIndexItems li {
     counter-increment: item;
     padding: 0 0 10px 0;
     list-style: none;
-    position: relative;
 }
 
-.listIndexItems li ol {
+.listIndexItems li ul {
     counter-reset: index;
     padding-left: 20px;
-}
-
-.listIndexItems li::before {
-    content: counters(item, ".") ". ";
 }
 
 .contentArticleSection {
