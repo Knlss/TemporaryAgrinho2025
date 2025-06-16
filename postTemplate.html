@@ -3,23 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="postsStyle.css">
+    <link rel="icon" href="/assets/imgs/ui/favicon.ico">
+    <link rel="stylesheet" href="/assets/css/global.css">
+    <link rel="stylesheet" href="/assets/css/posts.css">
     <title>
         MUDAR TITULO
     </title>
 </head>
     <body>
         <header class="header">
-            <a class="logoImageLink" href="#"><img class="logoImage" src="logoImage.png" alt="Imagem do blog"></a>
+            <a class="logoImageLink" href="/index.html"><img class="logoImage" src="/assets/imgs/ui/logoImg.png" alt="Imagem do blog"></a>
             <div class="navigationMenu">
-                <a class="navigationMenuOption" href="#">
+                <a class="navigationMenuOption" href="/index.html">
                     Home
                 </a>
-                <a class="navigationMenuOption" href="#">
+                <a class="navigationMenuOption" href="/articles/articlesHomepage.html">
                     Artigos
                 </a>
-                <a class="navigationMenuOption" href="#">
-                    Notícias
+                <a class="navigationMenuOption" href="/faq/faqHomepage.html">
+                    FAQ
                 </a>
             </div>
             <label class="toggleMode">
@@ -32,7 +34,7 @@
                 </h2>
         </div>
         <div class="contentTitleImage">
-            <img class="titleImage" src="src/imgs/bodyImage1.jpg" alt="">
+            <img class="titleImage" src="" alt="">
             <p class="titleImageText">
                 Origem da Imagem: Acervo Pessoal
             </p>
@@ -42,24 +44,24 @@
             <h5>
                 Índice de Conteúdos [<label for="toggleIndexButton">Mostrar/Ocultar</label>]
             </h5>
-            <ul class="listIndexItems">
+            <ol class="listIndexItems">
                 <li><a href="#paragraph1">
                     Titulo do paragrafo 1
                 </a></li>
                 <li><a href="#paragraph2">
                     Titulo do paragrafo 2
                 </a></li>
-                <ul>
+                <ol>
                     <li><a href="#subParagraph1">
                         Titulo do subparagrafo
                     </a></li>
-                </ul>
+                </ol>
                 <li><a href="#paragraph3">
                     Titulo do paragrafo 3
                 </a></li>
-            </ul>
+            </ol>
         </div>
-        <div class="contentArticleSession">
+        <section class="contentArticleSection">
             <div class="contentArticleText">
                 <h3 id="paragraph1" class="subTitle">
                     Titulo do texto
@@ -69,7 +71,7 @@
                 </p>
             </div>
             <div class="contentArticleImage">
-                <img class="articleImage" src="src/imgs/bodyImage1.jpg" alt="">
+                <img class="articleImage" src="" alt="">
                 <p class="articleImageText">
                     Origem da Imagem: Acervo Pessoal
                 </p>
@@ -87,13 +89,13 @@
                         <input class="sliderInput" type="radio" name="slide" id="slide2">
                         <input class="sliderInput" type="radio" name="slide" id="slide3">
                         <div class="slideshow s1">
-                            <img src="src/imgs/bodyImage1.jpg" alt="">
+                            <img src="" alt="">
                         </div>
                         <div class="slideshow">
-                            <img src="https://img.freepik.com/fotos-gratis/conservacao-ambiental-no-jardim-para-criancas_1150-15276.jpg?semt=ais_hybrid&w=740" alt="">
+                            <img src="" alt="">
                         </div>
                         <div class="slideshow">
-                            <img src="src/imgs/bodyImage2.jpg" alt="">
+                            <img src="" alt="">
                         </div>
                         <div class="sliderNavigation">
                             <label class="sliderBar" for="slide1"></label>
@@ -113,19 +115,40 @@
                 </p>
             </div>
             <div class="contentArticleImage">
-                <img class="articleImage" src="src/imgs/bodyImage2.jpg" alt="">
+                <img class="articleImage" src="" alt="">
                 <p class="articleImageText">
                     Origem da Imagem: Acervo Pessoal
                 </p>
             </div>
-        </div>
-        <div class="contentRecommendedSession">
+        </section>
+
+        <section class="contentReferenceSection">
+            <h2>
+                Referências Bibliográficas
+            </h2>
+            <div class="horizontalLine"></div>
+            <div class="contentReferenceList">
+                <ol>
+                    <li>
+                        referencia 1
+                    </li>
+                    <li>
+                        referencia 2
+                    </li>
+                    <li>
+                        referencia 3
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <section class="contentRecommendedSection">
             <h2>
                 Posts Recomendados
             </h2>
             <div class="horizontalLine"></div>
             <div class="contentRecommendedCard">
-                <a href="importantInformation.html" target="_blank">
+                <a href="importantInformation.html">
                     <div class="recommendedCard">
                         <div class="recommendedCardCategory">
                             GESTÃO
@@ -141,11 +164,11 @@
                             Ler Mais
                         </div>
                     </div>
-                    <img class="recommendedCardImage" src="https://preview.redd.it/uma-foto-aleatoria-de-um-animal-da-sua-galeria-v0-7hil5bhx6afc1.png?width=720&format=png&auto=webp&s=09de5e9787963d8f0b0b8366d739d4d033a0afe1" alt="Brachiaria">
+                    <img class="recommendedCardImage" src="" alt="">
                 </a>
             </div>
             <div class="contentRecommendedCard">
-                <a href="importantInformation.html" target="_blank">
+                <a href="importantInformation.html">
                     <div class="recommendedCard">
                         <div class="recommendedCardCategory">
                             GESTÃO
@@ -161,11 +184,11 @@
                             Ler Mais
                         </div>
                     </div>
-                    <img class="recommendedCardImage" src="https://preview.redd.it/uma-foto-aleatoria-de-um-animal-da-sua-galeria-v0-7hil5bhx6afc1.png?width=720&format=png&auto=webp&s=09de5e9787963d8f0b0b8366d739d4d033a0afe1" alt="Brachiaria">
+                    <img class="recommendedCardImage" src="" alt="">
                 </a>
             </div>
             <div class="contentRecommendedCard">
-                <a href="importantInformation.html" target="_blank">
+                <a href="importantInformation.html">
                     <div class="recommendedCard">
                         <div class="recommendedCardCategory">
                             GESTÃO
@@ -181,11 +204,11 @@
                             Ler Mais
                         </div>
                     </div>
-                    <img class="recommendedCardImage" src="https://preview.redd.it/uma-foto-aleatoria-de-um-animal-da-sua-galeria-v0-7hil5bhx6afc1.png?width=720&format=png&auto=webp&s=09de5e9787963d8f0b0b8366d739d4d033a0afe1" alt="Brachiaria">
+                    <img class="recommendedCardImage" src="" alt="">
                 </a>
             </div>
-        </div>
-        <div class="contentCommentSession">
+        </section>
+        <section class="contentCommentSection">
             <h2>
                 Comentários
             </h2>
@@ -194,7 +217,7 @@
             </p>
             <div class="horizontalLine"></div>
             <div class="contentCommentCard">
-                <img src="src/imgs/commentUsersAvatar/userAvatar1.jpg" alt="" class="commentCardUserAvatar">
+                <img src="" alt="" class="commentCardUserAvatar">
                 <div class="commentCard">
                     <div class="commentCardHeader">
                         <span class="commentCardUserName">
@@ -213,7 +236,7 @@
                 </div>
             </div>
             <div class="contentCommentCard">
-                <img src="src/imgs/commentUsersAvatar/userAvatar1.jpg" alt="" class="commentCardUserAvatar">
+                <img src="" alt="" class="commentCardUserAvatar">
                 <div class="commentCard">
                     <div class="commentCardHeader">
                         <span class="commentCardUserName">
@@ -232,7 +255,7 @@
                 </div>
             </div>
             <div class="contentCommentCard">
-                <img src="src/imgs/commentUsersAvatar/userAvatar1.jpg" alt="" class="commentCardUserAvatar">
+                <img src="" alt="" class="commentCardUserAvatar">
                 <div class="commentCard">
                     <div class="commentCardHeader">
                         <span class="commentCardUserName">
@@ -250,7 +273,7 @@
                     </p>
                 </div>
             </div>
-        </div>
+        </section>
         <footer class="footer">
             <div class="contentBlogAbout">
                 <h3>
@@ -260,39 +283,7 @@
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi odio nisl, bibendum ac ipsum a,
                     dignissim hendrerit augue. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis.
                 </p>
-                <div class="contentArticleShare">
-                    <ul>
-                        <li>
-                            <a href="https://web.whatsapp.com/send?text=TEXTO E LINK DO ARTIGO" class="shareItem" target="_blank">
-                                <div class="shareLabel">
-                                    <img class="shareImage" src="src/imgs/share/shareImage1.png" alt="whatsapp">
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.facebook.com/sharer/sharer.php?u=TEXTO E LINK DO ARTIGO" class="shareItem" target="_blank">
-                                <div class="shareLabel">
-                                    <img class="shareImage" src="src/imgs/share/shareImage2.png" alt="facebook">
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://x.com/intent/post?url=TEXTO E LINK DO ARTIGO" class="shareItem" target="_blank">
-                                <div class="shareLabel">
-                                    <img class="shareImage" src="src/imgs/share/shareImage3.png" alt="X">
-                                </div>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="https://www.linkedin.com/sharing/share-offsite/?url=TEXTO E LINK DO ARTIGO" class="shareItem" target="_blank">
-                                <div class="shareLabel">
-                                    <img class="shareImage" src="src/imgs/share/shareImage4.png" alt="linkedin">
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-                <img class="logoImage" src="logoImage.png" alt="Imagem do blog">
+                <img class="logoImage" src="/assets/imgs/ui/logoImg.png" alt="Imagem do blog">
             </div>
             <div class="contentBlogInformation">
                 <div class="address">
