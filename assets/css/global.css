@@ -178,11 +178,11 @@ input:checked+.toggleMode-btn:before {
         font-size: 22px;
     }
 
-    .logoImageLink {
+    .header .logoImageLink {
         height: 30px;
     }
 
-    .logoImageLink .logoImage {
+    .header .logoImage {
         width: 60px; 
         height: auto;
         margin-right: 8px;

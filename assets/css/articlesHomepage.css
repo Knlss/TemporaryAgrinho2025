@@ -97,12 +97,12 @@
     color: var(--recommendedCardFooterColor); 
 }
 
-.footerItem {
+.recommendedFooterItem {
     display: flex;
     align-items: center;
 }
 
-.footerItem .emoji {
+.recommendedFooterItem .emoji {
     margin-right: 6px;
     font-size: 12px;
 }
@@ -129,7 +129,7 @@
         height: 200px;
     }
 
-    .footerItem .emoji {
+    .recommendedFooterItem .emoji {
         margin-right: 2px;
         font-size: 10px;
     }
