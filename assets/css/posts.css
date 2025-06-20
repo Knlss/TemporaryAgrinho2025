@@ -58,7 +58,7 @@ h3 {
     margin: 20px auto 40px auto;
 }
 
-.contentTitleImage img {
+.titleImage {
     width: 69%;
     border-radius: 40px;
 }
@@ -469,10 +469,10 @@ h3 {
         margin: 20px auto;
     }
 
-    .contentTitleImage img,
+    .titleImage,
     .articleImage,
     .articleSlider {
-        width: 100%;
+        width: 90%;
         height: auto;
         border-radius: 20px;
     }

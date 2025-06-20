@@ -35,10 +35,6 @@ h3 {
     margin: 10px 0px;
 }
 
-.contentFAQSection h2:hover {
-    margin: 10px 0px;
-}
-
 .contentToggleQuestion {
     display: flex;
     flex-direction: column;
@@ -107,5 +103,4 @@ h3 {
     .contentQuestionTitle h2, .questionArrow {
         font-size: 20px;
     }
-
 }

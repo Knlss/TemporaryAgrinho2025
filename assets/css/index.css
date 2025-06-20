@@ -1,8 +1,8 @@
 :root {
     --toggleIndexLinkColor: #934126;
     --toggleIndexLinkHover: #270a0a;
-    --index_display: none;
-    --index_width: 290px;
+    --indexDisplay: none;
+    --indexWidth: 290px;
     --articleSectionBackgroundColor: #ededda;
 }
 
@@ -13,8 +13,8 @@
 }
 
 :root:has(#toggleIndexButton:checked) {
-    --index_display: flex;
-    --index_width: 40%;
+    --indexDisplay: flex;
+    --indexWidth: 40%;
 }
 
 h3 {
@@ -42,13 +42,8 @@ h3 {
     margin: 20px auto 40px auto;
 }
 
-.contentTitleImage img {
+.titleImage {
     width: 69%;
-    border-radius: 40px;
-}
-
-.contentToggleIndex label {
-    font-weight: 400;
 }
 
 .contentToggleIndex {
@@ -56,12 +51,8 @@ h3 {
     flex-direction: column;
     font-size: 18px;
     margin: 20px 20% 40px 18%;
-    width: var(--index_width);
+    width: var(--indexWidth);
     border: 1px solid var(--sectionBorderColor);
-}
-
-.toggleIndexButton {
-    display: none;
 }
 
 .contentToggleIndex h5 {
@@ -70,6 +61,14 @@ h3 {
 
 .contentToggleIndex h5:has(#toggleIndexButton:checked) {
     margin: 15px auto 20px auto;
+}
+
+.contentToggleIndex label {
+    font-weight: 400;
+}
+
+.toggleIndexButton {
+    display: none;
 }
 
 .contentToggleIndex label, 
@@ -87,7 +86,7 @@ h3 {
 }
 
 .contentToggleIndex ul {
-    display: var(--index_display);
+    display: var(--indexDisplay);
     flex-direction: column;
     cursor: default;
 }
@@ -122,14 +121,14 @@ h3 {
     width: 80%
 }
 
-.subTitle {
-    font-size: 26px;
-    margin-bottom: 25px;
-}
-
 .contentArticleText a {
     text-decoration: none;
     color: var(--toggleIndexLinkColor);
+}
+
+.subTitle {
+    font-size: 26px;
+    margin-bottom: 25px;
 }
 
 .articleText {
@@ -153,276 +152,19 @@ h3 {
     border-radius: 40px;
 }
 
-.articleImageText, .articleSliderText, .titleImageText {
+.articleImageText, .titleImageText {
     margin: 2px auto 0px;
     font-size: 10px;
 }
 
-.contentArticleSlide {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin: 20px auto 30px auto;
-}
-
-.articleSlider {
-    width: 720px;
-    height: 450px;
-    border-radius: 40px;
-    overflow: hidden;
-    position: relative;
-}
-
-.slider {
-    display: flex;
-    width: 300%;
-    height: 100%;
-}
-
-.contentArticleSlide .articleSlider img {
-    height: 100%;
-    width: 100%;
-}
-
-.sliderInput {
-    display: none;
-}
-@keyframes slideshow1 {
-    0%, 16.66% {
-        margin-left: 0%;
-    }
-
-    33.33%, 49.99% {
-        margin-left: -33.33%;
-    }
-
-    66.66%, 83.32% {
-        margin-left: -66.66%;
-    }
-
-    100% {
-        margin-left: 0%;
-    }
-}
-
-@keyframes slideshow2 {
-    0%, 16.66% {
-        margin-left: -33.33%;
-    }
-
-    33.33%, 49.99% {
-        margin-left: -66.66%;
-    }
-
-    66.66%, 83.32% {
-        margin-left: 0%;
-    }
-
-    100% {
-        margin-left: -33.33%;
-    }
-}
-
-
-@keyframes slideshow3 {
-    0%, 16.66% {
-        margin-left: -66.66%;
-    }
-
-    33.33%, 49.99% {
-        margin-left: 0%;
-    }
-
-    66.66%, 83.32% {
-        margin-left: -33.33%;
-    }
-
-    100% {
-        margin-left: -66.66%;
-    }
-}
-
-#slide1:checked~.s1 {
-    animation: slideshow1 20s infinite;
-    position: relative;
-}
-
-#slide2:checked~.s1 {
-    animation: slideshow2 20s infinite;
-    position: relative;
-}
-
-#slide3:checked~.s1 {
-    animation: slideshow3 20s infinite;
-    position: relative;
-}
-
-.slideshow {
-    width: 33.33%;
-    transition: .4s;
-}
-
-.sliderNavigation {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translate(-50%);
-    display: flex;
-}
-
-.sliderBar {
-    width: 70px;
-    height: 11px;
-    border: 2px solid var(--slideBarColor);
-    border-radius: 25px;
-    margin: 2%;
-}
-
-.sliderBar:hover {
-    background-color: var(--slideBarHover);
-}
-
-.contentRecommendedSection {
-    display: flex;
-    flex-direction: column;
-    font-size: 18px;
-    width: 65%
-}
-
-.contentRecommendedSection {
-    margin: 20px auto 30px;
-}
-
-.contentRecommendedSection h2 {
-    margin-bottom: 15px;
-}
-
-.horizontalLine {
-    height: 1px; 
-    width: 100%; 
-    background-color: var(--sectionBorderColor); 
-    margin-bottom: 20px;
-}
-
-.contentRecommendedCard {
-    display: flex;
-    width: 700px;
-    margin: 15px;
-    background-color: var(--recommendedCardBackgroundColor);
-    border-radius: 8px;
-    box-shadow: 0 3px 6px var(--bodyShadow);
-    transition: box-shadow .4s ease;
-    overflow: hidden;
-}
-
-.contentRecommendedCard a {
-    display: flex;
-    text-decoration: none;
-}
-
-.recommendedCard {
-    flex: 1;
-    padding: 20px;
-}
-
-.contentRecommendedCard:hover {
-    box-shadow: 0 4px 12px var(--bodyShadowHover);
-}
-
-.recommendedCardCategory {
-    font-size: 12px;
-    color: var(--recommendedCardInfs);
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-.recommendedCardTitle {
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 10px;
-    color: var(--recommendedCardTitle);
-}
-
-.recommendedCardDescription {
-    color: var(--textColor);
-    margin-bottom: 20px;
-}
-
-.recommendedCardReadMore {
-    font-size: 12px;
-    color: var(--recommendedCardInfs);
-    font-weight: bold;
-    width: 50px;
-    cursor: pointer;
-}
-
-.recommendedCardImage {
-    width: 200px;
-    object-fit: cover;
-}
-
-.contentCommentSection {
-    margin: 10px auto 40px auto;
-}
-
-.commentAmount {
-    font-size: 16px;
-    margin-top: 0px;
-}
-
-.contentCommentCard {
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-    margin: 15px;
-    width: 800px;
-    font-family: Arial, sans-serif;
-}
-
-.commentCardUserAvatar {
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    object-fit: cover;
-}
-
-.commentCard {
-    flex: 1;
-}
-
-.commentCardHeader {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 5px;
-}
-
-.commentCardUserName {
-    font-weight: bold;
-    color: var(--cardUserName);
-}
-
-.commentCardTimestamp {
-    font-size: 12px;
-    color: var(--cardTimestamp);
-}
-
-.commentCardText {
-    margin: 0;
-    font-size: 14px;
-    text-indent: 18px;
-}
-
 @media (max-width: 1100px) {
-
     :root {
-        --index_width: 290px;
+        --indexWidth: 290px;
     }
 
     :root:has(#toggleIndexButton:checked) {
-        --index_width: 290px;
-        --index_display: flex;
+        --indexWidth: 290px;
+        --indexDisplay: flex;
     }
 
     .contentCentralTitle h2 {
@@ -431,17 +173,15 @@ h3 {
     }
 
     .contentTitleImage,
-    .contentArticleImage,
-    .contentArticleSlide {
+    .contentArticleImage {
         width: 90%;
         height: auto;
         margin: 20px auto;
     }
 
-    .contentTitleImage img,
-    .articleImage,
-    .articleSlider {
-        width: 100%;
+    .titleImage,
+    .articleImage {
+        width: 90%;
         height: auto;
         border-radius: 20px;
     }
@@ -472,36 +212,5 @@ h3 {
     .articleText {
         text-indent: 15px;
         padding-left: 5px;
-    }
-
-    .contentRecommendedSection,
-    .contentCommentSection {
-        width: 90%;
-    }
-
-    .contentRecommendedCard {
-        border-radius: 8px;
-        width: 100%;
-        margin-left: 0px;
-    }
-
-    .contentRecommendedCard a {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .recommendedCardImage {
-        width: 100%;
-        height: 200px;
-    }
-
-    .contentCommentCard {
-        width: 100%;
-        margin: 15px 0px;
-    }
-
-    .commentCardUserAvatar {
-        width: 40px;
-        height: 40px;
     }
 }

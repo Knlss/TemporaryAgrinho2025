@@ -157,16 +157,11 @@ input:checked+.toggleMode-btn:before {
     font-size: 14px;
 }
 
-.address {
-    margin: 0;
-}
-
-.copyright {
+.address, .copyright {
     margin: 0;
 }
 
 @media (max-width: 1100px) {
-
     .header {
         flex-direction: row;
         justify-content: space-between;
