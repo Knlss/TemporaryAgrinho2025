@@ -43,7 +43,7 @@ h3 {
 }
 
 .contentTitleImage img {
-    width: 1050px;
+    width: 69%;
     border-radius: 40px;
 }
 
@@ -93,18 +93,16 @@ h3 {
 }
 
 .listIndexItems {
-    padding: 0px 0px 0px 40px;
     font-size: 15px;
+    padding-left: 40px;
 }
 
 .listIndexItems li {
-    counter-increment: item;
     padding: 0 0 10px 0;
     list-style: none;
 }
 
-.listIndexItems li ul {
-    counter-reset: index;
+.listIndexItems ul {
     padding-left: 20px;
 }
 
@@ -416,7 +414,7 @@ h3 {
     text-indent: 18px;
 }
 
-@media (max-width: 780px) {
+@media (max-width: 1100px) {
 
     :root {
         --index_width: 290px;
@@ -454,7 +452,6 @@ h3 {
 
     .listIndexItems {
         padding-left: 10px;
-        padding-right: 10px;
     }
 
     .contentArticleSection {
